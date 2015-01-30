@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Feverestival 2015</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="sheet_text">
+    <![CDATA[
+       <strong>XI FEVERESTIVAL</strong>
+       <br/><br/>
+
+    <strong>Direção de Produção:</strong> Cynthia Margareth<br/>
+    <strong>Coordenação Produção Executiva:</strong> Cristiane Taguchi, Erika Cunha e Mariella Siqueira<br/>
+    <strong>Coordenação Financeira/administrativo:</strong> Giselle Bastos<br/>
+    <strong>Coordenação Técnica:</strong> Eduardo Albergaria e Daniel Salvi<br/>
+    <strong>Coordenação Logística:</strong> Margarida Sequeira<br/>
+    <strong>Relações Internacionais e Assessoria Administrativa:</strong> Pedro de Freitas<br/>
+    <br/><br/>
+    <strong>Curadoria:</strong> Camilo Scandolara, Vinícius Torres Machado e Joice Lima.<br/>
+    <strong>Curadoria Contação de Histórias e coordenação Noite de Contos:</strong> Isis Madi<br/>
+    <strong>Curadoria e Coordenação Clownferência:</strong> Joice Lima<br/>
+    <strong>Coordenação Trueque:</strong> Joice Lima (Feverestival) e Ricardo Puccetti (Lume Teatro)<br/>
+    <br/><br/>
+    <strong>Equipe de produção:</strong> Andrea Desiderio, Quesia Botelho, Marana Delboni, Isabela Basso, Gustavo Valezi, Renan Souza e Renan Villella<br/>
+    <strong>Secretaria de Produção:</strong> Gabriela di Paula<br/>
+    <strong>Equipe Técnica:</strong> Bruno Garcia, Érico Damineli, Maria Emília Cunha, Francisco Barganian e Luis Carlos Nem<br/>
+    <strong>Oficina Técnica:</strong> Francisco Barganian<br/>
+    <br/><br/>
+    <strong>Equipe Logística:</strong> Luiza Moreira Salles, Dante Paccola e André Moraes<br/>
+    <strong>Designer Gráfico e Web Design:</strong> Bruno Cardoso e Laura Françozo<br/>
+    <strong>Assessoria de Imprensa:</strong> Maria Claudia Miguel<br/>
+    <strong>Equipe Acessibilidade e Ação Comunitária:</strong> Mariella Siqueira e Quesia Botelho<br/>
+    <strong>Equipe Comunicação:</strong> Bruno Cardoso, Renan Souza e Quesia Botelho.<br/>
+    <strong>Equipe Registro Audiovisual:</strong> Maycon Soldan, Kaian Ciasca, Ericson Cunha e Laura Françozo.<br/>
+    <br/><br/>
+    <strong>Realização Núcleo Feverestival:</strong> Cynthia Margareth, Cristiane Taguchi, Erika Cunha e Mariella Siqueira<br/>
+    <br/><br/>
+    <strong>Parcerias:</strong> Secretaria de Cultura do Estado de São Paulo, Secretaria de Cultura da Prefeitura Municipal de Campinas, SESC, UNICAMP.<br/>
+    <br/><br/>
+    <strong>Apoio:</strong> Secretaria de Acessibilidade, Almanaque Café, Bagdá Cozinha Árabe, Casa São Jorge, Café e
+    Padaria Barão Francês, Chica da Pizza, Chopp do Fritz – Barão Geraldo, Entremanos Bar e Restaurante, Raízes Zen Alimentos Vegetarianos, Andanças Gourmet Bar e Restaurante, Bar do Jair, Panetteria di Capri, Canto do Acarajé, Valise de Cronópio, Banca Central, Borda Brasil, Echos Studio Bar, La Terrine Confort Food, Praça do Coco, Varanda da Vila, Vitalidade Restaurante e Café.<br/>
+      <br/><br/>
+    <strong>Agradecimentos:</strong><br/>
+    Agradecemos a todos inscritos no edital, que garantiram a importância do festival.<br/>
+    Ao Bruno Pregnolatto, Theo Ferreira Pregnolatto, Fabio Rizza e Francisco Barganian.<br/>
+    Aos companheiros do Lume Teatro e do Grupo Matula Teatro.<br/>
+    Aos professores e aos alunos do Instituto de Artes da UNICAMP.<br/>
+
+    <br/><br/>
+    <strong>Contatos:</strong><br/>
+    www.feverestival.com.br<br/>
+    www.facebook.com/feverestival<br/>
+    e-mail: feverestivalcampinas@gmail.com<br/><br/>
+
+    ]]>
+    </string>
+    <string name="address_text">
+        <![CDATA[
+        <strong>Endereços/locais dos espetáculos:</strong><br/>
+        <br/>
+        <strong>Teatros:</strong><br/>
+        <strong>Sesc Campinas</strong><br/>
+        Rua Dom José I, 270/333, Bonfim, Campinas/SP<br/>
+        <strong>Teatro Municipal José de Castro Mendes</strong><br/>
+        Rua Conselheiro Gomide, 62, Vila Industrial, Campinas/SP<br/>
+        <strong>Centro Cultural Casarão</strong><br/>
+        Rua Maria Sampaio Reginato, s/n – Terras do Barão - Km 15, Campinas/SP<br/>
+        <strong>Teatro Maria Monteiro</strong><br/>
+        Rua Dom Gilberto Pereira Lopes, s/nº - Vila Padre Anchieta - Campinas<br/>
+        <strong>Estação Guanabara</strong><br/>
+        Rua Mário Siqueira, 829 - Botafogo - Campinas<br/>
+        <strong>Sala dos Toninhos - Estação Cultura</strong><br/>
+        Praça Marechal Floriano Peixoto, s/n, Vila Industrial, Campinas<br/>
+        <br/>
+        <strong>Mostra de Bolso</strong><br/>
+        <strong>Boa Companhia - Teatro Útero de Vênus</strong><br/>
+        Rua Edna de Barros Sanches, 79, Vl. Santa Isabel - Barão Geraldo<br/>
+        <strong>Grupo Matula Teatro - Rosa dos Ventos - Moradas das Artes</strong><br/>
+        Rua Edna de Barros Sanches, 80, Vl. Santa Isabel - Barão Geraldo<br/>
+        <strong>Barracão Teatro</strong><br/>
+        Rua Eduardo Modesto, 128, Vl. Sta Isabel. - Barão Geraldo<br/>
+        <strong>Lume Teatro</strong><br/>
+        Rua Carlos Diniz Leitão, 150, Vl Sta Isabel - Barão Geraldo<br/>
+        <br/>
+        <strong>Praças e Rua</strong><br/>
+        <strong>Teatro de Arena da Praça da Paz</strong><br/>
+        Av. Albert Einstein, 763, UNICAMP, Barão Geraldo<br/>
+        <strong>Praça do Coco (Praça Irmã Carmela)</strong><br/>
+        Rua José Martins, 738 - Barão Geraldo<br/>
+        <strong>Praça Durval Pataro</strong><br/>
+        Av. Modesto Fernandes,100 - Barão Geraldo<br/>
+        <strong>Largo do Rosário (Praça Visconde de Indaiatuba)</strong><br/>
+        R. General Osório, 998, Centro, Campinas<br/>
+        <strong>Praça da Catedral (Praça José Bonifácio)</strong><br/>
+        R. 13 de Maio, 47<br/>
+        <strong>Largo das Andorinhas</strong><br/>
+        Avenida Doutor Thomaz Alves, 1774, Centro, Campinas<br/>
+        <strong>Praça da Concórdia</strong><br/>
+        Rua Manoel Machado Pereira, 970, Parque Valença - Campo Grande Campinas<br/>
+        <strong>Centro de Referência da Pessoa com Deficiência - Vida Nova</strong><br/>
+        Rua Odete Therezinha Santucci Octaviano, 92 – CIC Vida Nova – Campinas<br/>
+        <strong>Mercado Central</strong><br/>
+        Av. Benjamin Constant, 855, Centro, Campinas<br/>
+        <strong>Auditório Beethoven - Concha Acústica do Taquaral</strong><br/>
+        Av. Dr Heitor Penteado, s/nº - Parque Portugal – Taquaral<br/>
+        <br/>
+        <strong>Terminais Urbanos: Central, Ouro Verde, Vila união e Barão Geraldo</strong><br/>
+        <br/>
+        <strong>Central</strong> - Rua Saldanha Marinho, 138, Centro<br/>
+        <strong>Ouro Verde</strong> - Rua Armando Frederico Renganeschi, S/N - Jardim Cristina, Campinas<br/>
+        <strong>Vila União</strong> - Rua Dusolina Leone Tourniex, 101, Vila União<br/>
+        <strong>Barão Geraldo</strong> - Rua Luiz Vicentin, Barão Geraldo<br/>
+        <strong>Rodoviária (Terminal Multimodal Ramos de Azevedo)</strong><br/>
+        Rua Doutor Pereira Lima, 60-140 - Vila Industrial, Campinas<br/>
+        <strong>Aeroporto Internacional de Viracopos</strong><br/>
+        Rodovia Santos Dumont, km 66 - Parque Viracopos, Campinas<br/>
+
+    ]]>
+    </string>
+
+
+
+</resources>
