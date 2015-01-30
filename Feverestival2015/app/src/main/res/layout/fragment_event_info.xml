@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:background="@android:color/white"
+          android:padding="10dp"
+          android:id="@+id/event_header"
+          android:paddingRight="70dp"
+          android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_name"
+            android:textSize="20sp"
+            android:text="Event Name"
+            android:textStyle="bold"
+            android:textColor="#6c5ba8"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Place"
+            android:id="@+id/event_place"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_date_time"
+            android:text="Date Time"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@+id/event_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingTop="40dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/event_content"
+                android:textSize="14sp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <ImageButton
+        android:id="@+id/event_add"
+        android:layout_below="@+id/event_header"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/btn_add_purple"
+        android:scaleType="fitCenter"
+        />
+</RelativeLayout>

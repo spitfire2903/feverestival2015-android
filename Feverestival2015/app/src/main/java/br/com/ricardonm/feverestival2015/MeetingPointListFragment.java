@@ -10,7 +10,7 @@ import br.com.ricardonm.feverestival2015.model.EventTO;
  */
 public class MeetingPointListFragment extends EventListFragment {
     public MeetingPointListFragment(){
-        super(EventTO.EventType.EVENT_TYPE_MEETING_POINT);
+        this.eventType = EventTO.EventType.EVENT_TYPE_MEETING_POINT;
     }
 
     @Override

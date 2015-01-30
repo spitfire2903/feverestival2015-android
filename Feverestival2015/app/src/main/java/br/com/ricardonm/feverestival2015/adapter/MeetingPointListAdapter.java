@@ -55,11 +55,8 @@ public class MeetingPointListAdapter extends ArrayAdapter<EventTO> {
 
         dateTime.setText(event.getDate()+" - "+event.getTime());
 
-        if (event.getSummary() != null && event.getSummary().length() > 0) {
-            promotion.setText(event.getSummary());
-        } else{
-            promotion.setVisibility(View.GONE);
-        }
+        promotion.setText(event.getSummary());
+
 
         return view;
     }

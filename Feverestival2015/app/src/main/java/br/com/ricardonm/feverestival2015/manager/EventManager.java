@@ -26,7 +26,7 @@ public class EventManager {
     public  static List<EventTO> getMyCalendarEvents(){
         List<EventTO> list = null;
 
-        list = EventTO.find(EventTO.class, "favorited = ?", Boolean.TRUE.toString());
+        list = EventTO.find(EventTO.class, "favorited = ?", "1");
 
         return list;
     }

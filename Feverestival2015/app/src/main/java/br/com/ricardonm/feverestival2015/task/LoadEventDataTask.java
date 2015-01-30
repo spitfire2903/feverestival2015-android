@@ -16,6 +16,7 @@ public class LoadEventDataTask extends AsyncTask<Void, Void, Void> {
     private EventListFragment parent;
     private List<EventTO> eventList;
     private EventTO.EventType eventType = null;
+    private Boolean isFavorited = Boolean.FALSE;
 
     public LoadEventDataTask(EventListFragment fragment){
         super();
@@ -28,6 +29,13 @@ public class LoadEventDataTask extends AsyncTask<Void, Void, Void> {
         this.eventType = type;
     }
 
+    public LoadEventDataTask(EventListFragment fragment, EventTO.EventType type,
+                             Boolean isFavorited){
+        super();
+        this.parent = fragment;
+        this.eventType = type;
+        this.isFavorited = isFavorited;
+    }
 
     @Override
     protected void onPreExecute() {
@@ -38,7 +46,10 @@ public class LoadEventDataTask extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... voids) {
-        this.eventList = EventManager.getEventsByType(this.eventType);
+        if (this.isFavorited == null || !this.isFavorited)
+            this.eventList = EventManager.getEventsByType(this.eventType);
+        else
+            this.eventList = EventManager.getMyCalendarEvents();
 
         return null;
     }

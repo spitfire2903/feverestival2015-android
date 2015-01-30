@@ -3,6 +3,7 @@ package br.com.ricardonm.feverestival2015.model;
 import com.orm.SugarRecord;
 import com.orm.dsl.Ignore;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,7 +11,9 @@ import java.util.Date;
 /**
  * Created by ricardomiranda on 30/01/15.
  */
-public class EventTO extends SugarRecord<EventTO> {
+public class EventTO extends SugarRecord<EventTO> implements Serializable {
+
+   
     private long eventId;
     private String name;
     boolean favorited;
