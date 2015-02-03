@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.ricardonm.feverestival2015.FoodPlaceListFragment;
+import br.com.ricardonm.feverestival2015.MainActivity;
 import br.com.ricardonm.feverestival2015.manager.FoodPlaceManager;
 import br.com.ricardonm.feverestival2015.model.FoodPlaceTO;
 
@@ -25,6 +26,8 @@ public class LoadFoodPlaceDataTask extends AsyncTask<Void, Void, Void> {
     protected void onPreExecute() {
         super.onPreExecute();
 
+        ((MainActivity)this.parent.getActivity()).showThrobber();
+
         foodPlaceList = new ArrayList<FoodPlaceTO>();
     }
 
@@ -38,6 +41,8 @@ public class LoadFoodPlaceDataTask extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
+
+        ((MainActivity)this.parent.getActivity()).hideThrobber();
 
         parent.setFoodPlaceList(this.foodPlaceList);
     }

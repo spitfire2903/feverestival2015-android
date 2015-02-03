@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.ricardonm.feverestival2015.EventListFragment;
+import br.com.ricardonm.feverestival2015.MainActivity;
 import br.com.ricardonm.feverestival2015.manager.EventManager;
 import br.com.ricardonm.feverestival2015.model.EventTO;
 
@@ -41,6 +42,8 @@ public class LoadEventDataTask extends AsyncTask<Void, Void, Void> {
     protected void onPreExecute() {
         super.onPreExecute();
 
+        ((MainActivity)this.parent.getActivity()).showThrobber();
+
         eventList = new ArrayList<EventTO>();
     }
 
@@ -57,6 +60,8 @@ public class LoadEventDataTask extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
+
+        ((MainActivity)this.parent.getActivity()).hideThrobber();
 
         parent.setEventList(this.eventList);
     }

@@ -1,6 +1,6 @@
 package br.com.ricardonm.feverestival2015.manager;
 
-import org.apache.commons.collections.IteratorUtils;
+import com.google.common.collect.Lists;
 
 import java.util.List;
 
@@ -13,7 +13,8 @@ public class FoodPlaceManager {
     public static List<FoodPlaceTO> getFoodPlaces(){
         List<FoodPlaceTO> list = null;
 
-        list = IteratorUtils.toList(FoodPlaceTO.findAll(FoodPlaceTO.class));
+        list = Lists.newArrayList(FoodPlaceTO.findAll(FoodPlaceTO.class));
+        //list = null;//IteratorUtils.toList(FoodPlaceTO.findAll(FoodPlaceTO.class));
 
         return list;
     }

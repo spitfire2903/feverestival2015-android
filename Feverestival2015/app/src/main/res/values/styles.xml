@@ -3,7 +3,18 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="android:listSelector">@android:color/transparent</item>
+
+        <item name="android:activatedBackgroundIndicator">@drawable/drawer_selector</item>
+        <item name="android:listChoiceBackgroundIndicator">@drawable/drawer_list_selector</item>
+
+        <!--<item name="android:listChoiceIndicatorMultiple">@drawable/feverestival_btn_check_holo_light</item>-->
+        <item name="android:listChoiceIndicatorSingle">@drawable/drawer_selector</item>
+        <!--<item name="android:activatedBackgroundIndicator">@drawable/feverestival_activated_background_holo_light</item>-->
+
+        <!--<item name="android:listChoiceBackgroundIndicator">@drawable/feverestival_list_selector_holo_light</item>-->
+
+        <!--<item name="android:activatedBackgroundIndicator">@drawable/feverestival_activated_background_holo_light</item>-->
+
     </style>
 
 </resources>

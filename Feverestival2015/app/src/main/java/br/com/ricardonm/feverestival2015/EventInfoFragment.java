@@ -49,10 +49,10 @@ public class EventInfoFragment extends Fragment {
         this.addCalendar = (ImageButton) rootView.findViewById(R.id.event_add);
 
         if (this.event != null){
-            if (this.event.isFavorited()){
-                this.addCalendar.setVisibility(View.GONE);
-                //this.rotateAddButton(true);
-            }
+//            if (this.event.isFavorited()){
+//                //this.addCalendar.setVisibility(View.GONE);
+//                this.rotateAddButton(true);
+//            }
 
             if(this.event.getCategory() != null && this.event.getCategory()
                     .length() > 0) {
@@ -110,16 +110,16 @@ public class EventInfoFragment extends Fragment {
         this.addCalendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if (EventInfoFragment.this.event.isFavorited()){
-//                    //EventInfoFragment.this.rotateAddButton(false);
-//                    EventInfoFragment.this.event.setFavorited(false);
-//                    EventInfoFragment.this.event.save();
-//                } else{
-//                    EventInfoFragment.this.rotateAddButton(true);
+                if (EventInfoFragment.this.event.isFavorited()){
+                    EventInfoFragment.this.rotateAddButton(false);
+                    EventInfoFragment.this.event.setFavorited(false);
+                    EventInfoFragment.this.event.save();
+                } else{
+                    EventInfoFragment.this.rotateAddButton(true);
                     EventInfoFragment.this.event.setFavorited(true);
                     EventInfoFragment.this.event.save();
-                    EventInfoFragment.this.addCalendar.setVisibility(View.GONE);
-//                }
+//                    EventInfoFragment.this.addCalendar.setVisibility(View.GONE);
+                }
                 //EventInfoFragment.this.event.setFavorited(true);
                 //EventInfoFragment.this.event.save();
                 //EventInfoFragment.this.addCalendar.setVisibility(View.INVISIBLE);
@@ -129,18 +129,52 @@ public class EventInfoFragment extends Fragment {
         return rootView;
     }
 
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//
+//        if (this.event.isFavorited()){
+//            //this.addCalendar.setVisibility(View.GONE);
+//            this.rotateAddButton(true);
+//        }
+//    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        addCalendar.post(new Runnable() {
+            @Override
+            public void run() {
+                if (EventInfoFragment.this.event.isFavorited()){
+                    //this.addCalendar.setVisibility(View.GONE);
+                    EventInfoFragment.this.rotateAddButton(true);
+                }
+            }
+        });
+    }
+
     private void rotateAddButton(Boolean toClose){
         if (toClose) {
-            RotateAnimation ra = new RotateAnimation(0, 45);
+//            RotateAnimation ra = new RotateAnimation(0, 45, RotateAnimation.RELATIVE_TO_SELF, 1/2,
+//                    RotateAnimation.RELATIVE_TO_SELF,
+//                    1/2);
+
+            RotateAnimation ra = new RotateAnimation(0, 45, addCalendar.getWidth()/2,
+                    addCalendar.getHeight()/2);
             ra.setFillAfter(true);
-            ra.setDuration(1000);
+            ra.setDuration(700);
 
             addCalendar.startAnimation(ra);
         } else{
-            RotateAnimation ra = new RotateAnimation(0, -45);
+//            RotateAnimation ra = new RotateAnimation(45, 0, RotateAnimation.RELATIVE_TO_SELF, 1/2,
+//                    RotateAnimation.RELATIVE_TO_SELF,
+//                    1/2);
+            RotateAnimation ra = new RotateAnimation(45, 0, addCalendar.getWidth()/2,
+                    addCalendar.getHeight()/2);
 
             ra.setFillAfter(true);
-            ra.setDuration(1000);
+            ra.setDuration(700);
 
             addCalendar.startAnimation(ra);
         }

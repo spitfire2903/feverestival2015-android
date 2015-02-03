@@ -32,7 +32,7 @@ public class LoadEventTask extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        //parent.showThrobber();
+        parent.showThrobber();
 
         events = new ArrayList<EventTO>();
         foodPlaces = new ArrayList<FoodPlaceTO>();
@@ -49,11 +49,10 @@ public class LoadEventTask extends AsyncTask<Void, Void, Void> {
         if (list == null || list.size() == 0)
             this.readFoodPlaceJson(this.loadJSONFromAsset("foodPlaces.json"));
 
+        //list = EventManager.getEventsByType(EventTO.EventType.EVENT_TYPE_MEETING_POINT);
+        EventTO.deleteAll(EventTO.class, "EVENT_TYPE = ?", EventTO.EventType.EVENT_TYPE_MEETING_POINT.toString());
 
-        list = EventManager.getEventsByType(EventTO.EventType.EVENT_TYPE_MEETING_POINT);
-
-        if (list == null || list.size() == 0)
-            this.readMeetingPointsJson(this.loadJSONFromAsset("meetingPoints.json"));
+        this.readMeetingPointsJson(this.loadJSONFromAsset("meetingPoints.json"));
 
 
         list = EventManager.getEventsByType(EventTO.EventType.EVENT_TYPE_WORKSHOP);
@@ -88,7 +87,8 @@ public class LoadEventTask extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
-        //parent.hideThrobber();
+
+        parent.hideThrobber();
     }
 
     private String loadJSONFromAsset(String assetFile) {

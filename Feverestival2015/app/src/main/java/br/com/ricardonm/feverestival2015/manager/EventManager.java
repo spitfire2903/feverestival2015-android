@@ -1,6 +1,6 @@
 package br.com.ricardonm.feverestival2015.manager;
 
-import org.apache.commons.collections.IteratorUtils;
+import com.google.common.collect.Lists;
 
 import java.util.List;
 
@@ -17,7 +17,8 @@ public class EventManager {
         if (eventType != null) {
             list = EventTO.find(EventTO.class, "EVENT_TYPE = ?", eventType.toString());
         } else{
-            list = IteratorUtils.toList(EventTO.findAll(EventTO.class));
+            list = Lists.newArrayList(EventTO.findAll(EventTO.class));
+            //list = Lists.as null;//IteratorUtils.toList(EventTO.findAll(EventTO.class));
         }
 
         return list;

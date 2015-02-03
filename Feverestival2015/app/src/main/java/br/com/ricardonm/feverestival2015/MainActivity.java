@@ -99,6 +99,7 @@ public class MainActivity extends Activity
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, eventFragment)
+                        .addToBackStack(null)
                         .commit();
                 break;
             case 2:
@@ -108,6 +109,7 @@ public class MainActivity extends Activity
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, eventFragment)
+                        .addToBackStack(null)
                         .commit();
                 break;
             case 3:
@@ -117,6 +119,7 @@ public class MainActivity extends Activity
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, eventFragment)
+                        .addToBackStack(null)
                         .commit();
                 break;
             case 4:
@@ -126,6 +129,7 @@ public class MainActivity extends Activity
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, eventFragment)
+                        .addToBackStack(null)
                         .commit();
                 break;
             case 5:

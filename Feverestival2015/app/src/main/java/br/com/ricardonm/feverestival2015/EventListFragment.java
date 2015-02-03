@@ -28,18 +28,6 @@ public class EventListFragment extends Fragment {
     public EventListFragment(){
         super();
     }
-/*
-    public EventListFragment(EventTO.EventType type){
-        super();
-        this.eventType = type;
-    }
-
-
-    public EventListFragment(boolean isFavorited){
-        super();
-        this.isFavorited = isFavorited;
-    }
-*/
 
 
     @Override
@@ -73,7 +61,8 @@ public class EventListFragment extends Fragment {
                 args.putSerializable("event", event);
                 eventFragment.setArguments(args);
                 fragmentManager.beginTransaction()
-                        .replace(R.id.container, eventFragmentq)
+                        .replace(R.id.container, eventFragment)
+                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -87,5 +76,44 @@ public class EventListFragment extends Fragment {
     public void setEventList(List<EventTO> list){
         this.eventList = list;
         this.listView.setAdapter(new EventListAdapter(this.getActivity(), list));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        String title = null;
+
+        if(isFavorited != null && isFavorited){
+            title = "Meu Calendário";
+        } else{
+            if (eventType != null){
+                switch (eventType){
+                    case EVENT_TYPE_EXHIBITION:
+                        title = "Programação";
+
+                        break;
+                    case EVENT_TYPE_WORKSHOP:
+                        title = "Oficinas";
+
+                        break;
+                    case EVENT_TYPE_SPECIAL:
+                        title = "Eventos Especiais";
+
+                        break;
+                    case EVENT_TYPE_STORYTELLING:
+                        title = "Contação de Histórias";
+
+                        break;
+                    case EVENT_TYPE_MEETING_POINT:
+                        title = "Pontos de Encontros";
+
+                        break;
+                }
+            }
+
+        }
+
+        getActivity().getActionBar().setTitle(title);
     }
 }
